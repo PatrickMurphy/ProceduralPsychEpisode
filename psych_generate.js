@@ -2,7 +2,7 @@ var NearleyGenerator = require('nearley-generator');
 var myGrammar = require('./psych_script_compiled.js');
 let g = new NearleyGenerator.default(myGrammar);
 
-var psych_episode_state_lists = ["characters","items"];
+var psych_episode_state_lists = ["characters","things"];
 
 // murder scene, victim significant other / next of kin
 // current chief, is henry working, is psych hired
@@ -27,10 +27,14 @@ var psych_episode_state = {
 				, value: g.generate('random_name', .9)
 			}
 		],
-	items: [
+	things: [
 		{tag: '@MURDER_WEAPON@'
 			, title: 'Murder Weapon'
 			, value: g.generate('weapon', .9)
+		},
+		{tag: '@CRIME_SCENE@'
+			, title: 'Crime Scene'
+			, value: g.generate('scene_setting', .9)
 		}
 	]
 };
