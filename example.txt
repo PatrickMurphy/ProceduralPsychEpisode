@@ -1,0 +1,154 @@
+run1:
+Set Murder Weapon set to knife
+Set 2nd Wrong Suspect Name set to Kate
+Set First Wrong Suspect Name set to John
+Set Real Suspect Name set to Sam
+Set Victim Name set to Jared
+
+
+
+
+[Setting: Friday 05:54 AM 1974 Henry's House]
+[Young Shawn is strokinging with Younger Henry]
+Young Shawn: Dad, I don't want to practice my skills
+Younger Henry: Shawn, you are never going to learn to be a man unless you stop acting like a kid and practice.
+
+[Setting: Monday 04:15 PM 2020 Sewer Pipes]
+[Jared was killed by Sam using knife at @CRIME_SCENE@]
+
+[A potential new client walks into the Psych Office]
+New Client: Hello, my name is Abby. I am worried about my daughter.
+Can you help solve this?
+
+Hello, I am Shawn Spencer, I am a Recording Artist, and this is my partner "Radio Star". (refering to Gus)
+Burton Guster: Hello, No pictures please.
+Shawn Spencer: I hear you are the daughter of Jared when did you last see them?
+John: I saw Jared 4 days ago. I can't believe this.
+Shawn remembers a propagable computer while readdressesing.
+ He noices that the knife was owned by Sam
+Shawn Spencer: ah I see... and...  you have no hard feelings toward Jared?
+John: of course not! I loved Jared!
+Shawn Spencer: Sorry had to ask, we will be leaving now.
+Burton Guster: (entering Blueberry) Shawn, John totataly did it.
+Shawn Spencer: You know that's right.
+
+[Setting: Saturday 11:56 PM 2020 Jared's Apartment]
+Shawn Spencer: Shawn goes limp
+Gus Burton: Are you trying to tell me you went skydiving with a rabbi?
+Shawn Spencer: Doodles are the windows to the soul
+Gus Burton: Are you trying to tell me you went skydiving with a rabbi?
+
+Shawn smells a eutectic shirt while premissesing.
+ He noices that the knife was owned by Sam
+
+[Setting: Saturday 01:45 PM 2020 Neighborhood Park]
+Shawn Spencer: You have the wrong suspect Chief Vick
+
+final realization: Shawn sees a violated drawer while paroleesing.
+ He noices that the knife was owned by Sam
+
+capture guilty party at Landfill: Sam
+
+
+run2:
+
+Set Murder Weapon set to gun
+Set 2nd Wrong Suspect Name set to Kate
+Set First Wrong Suspect Name set to Sam
+Set Real Suspect Name set to Kate
+Set Victim Name set to Kate
+
+
+
+
+[Setting: Monday 05:46 AM 1971 Neighborhood Park]
+[Young Shawn and Young Gus are solidifieding with Younger Henry]
+Young Shawn: Dad, I don't want to practice my skills
+Younger Henry: Shawn, you are never going to learn to be a man unless you stop acting like a kid and practice.
+
+[Setting: Saturday 10:54 AM 2020 Old Sonora Town]
+[Kate was killed by Kate using gun at @CRIME_SCENE@]
+
+Gus has a case he wants to investigate because Gus wants to help a damsel in distress.
+
+Hello, I am Shawn Spencer, I am a psychic detective for the SBPD, and this is my partner "John Jacob Jingleheimer Schmidt". (refering to Gus)
+Burton Guster: Hello nice to meet you.
+Shawn Spencer: I hear you are the roommate of Kate when did you last see them?
+Sam: I saw Kate 4 days ago. I can't believe this.
+Shawn remembers a suffixal drawer while puzzleing.
+ He noices that the gun was owned by Kate
+Shawn Spencer: ah I see... and...  you have no hard feelings toward Kate?
+Sam: of course not! I loved Kate!
+Shawn Spencer: Sorry had to ask, we will be leaving now.
+Burton Guster: (entering Blueberry) Shawn, Sam totataly did it.
+Shawn Spencer: You know that's right.
+
+[Setting: Saturday 08:56 PM 2020 Zoo]
+Shawn Spencer: Muheee.
+Gus Burton: You know that's right
+Shawn Spencer: My Dad said I could borrow his boat.
+Gus Burton: How do you just eat when there's a dead guy laying there?
+
+Shawn deducts a yclept floor while exposinging.
+ He noices that the gun was owned by Kate
+
+[Setting: Friday 10:15 AM 2020 Kate's Apartment]
+Shawn Spencer: You have the wrong suspect Chief Vick
+
+final realization: Shawn hears a slimsy car while assuagesing.
+ He noices that the gun was owned by Kate
+
+capture guilty party at Kate's Apartment: Kate
+
+
+
+
+
+
+run 3:
+Set Murder Weapon set to car
+Set 2nd Wrong Suspect Name set to John
+Set First Wrong Suspect Name set to Jamie
+Set Real Suspect Name set to Abby
+Set Victim Name set to Kate
+
+
+
+
+[Setting: Wednesday 06:11 AM 1977 West Coast Pharmaceutical Office]
+[Young Shawn and Young Gus are neoterizeding with Younger Henry]
+Young Shawn: Dad, I don't want to practice my skills
+Younger Henry: Shawn, you are never going to learn to be a man unless you stop acting like a kid and practice.
+
+[Setting: Friday 04:54 AM 2020 Kate's Apartment]
+[Kate was killed by Abby using car at @CRIME_SCENE@]
+
+Gus has a case he wants to investigate because It has to do with Pharmaceutical sales.
+
+Hello, I am Shawn Spencer, I am a Touring Shadow Puppet Master by trade, and this is my partner "Don't ever call me Homeskillet". (refering to Gus)
+Burton Guster: Hello nice to meet you.
+Shawn Spencer: I hear you are the cheating girlfriend of Kate when did you last see them?
+Jamie: I saw Kate 4 days ago. I can't believe this.
+Shawn smells a rewarding car while debouchesing.
+ He noices that the car was owned by Abby
+Shawn Spencer: ah I see... and...  you have no hard feelings toward Kate?
+Jamie: of course not! I loved Kate!
+Shawn Spencer: Sorry had to ask, we will be leaving now.
+Burton Guster: (entering Blueberry) Shawn, Jamie totataly did it.
+Shawn Spencer: You know that's right.
+
+[Setting: Thursday 11:56 PM 2020 West Coast Pharmaceutical Office]
+Shawn Spencer: Mr. Yang is a lying liar from Liarsburg!
+Gus Burton: Are you trying to tell me you went skydiving with a rabbi?
+Shawn Spencer: Henery Spencer is a lying liar from Liarsburg!
+Gus Burton: Are you trying to tell me you went skydiving with a rabbi?
+
+Shawn sees a bipolar spoon while pipetteing.
+ He noices that the car was owned by Abby
+
+Turns out Jamie was actually just randomly connected
+
+final realization: Shawn sees a anadromous explosives while celebratinging.
+ He noices that the car was owned by Abby
+
+capture guilty party at Neighborhood Park: Abby
