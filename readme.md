@@ -1,5 +1,8 @@
 # Procedural Psych Episode Script
 
+Script to generate a random episode of the hilarious but formulaic show https://en.wikipedia.org/wiki/Psych
+
+
 ## Technology Used
 
  - Nearley
