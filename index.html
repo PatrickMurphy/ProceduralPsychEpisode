@@ -1,2 +1,11 @@
 <script src="psych_generate_browser.js"></script>
+<script type="text/javascript">
+	function genButtonClick(){
+		document.getElementById("episode").innerHTML= generateEpisode();
+	}
+	genButtonClick();
+</script>
 <h1>Procedural Psych Episode</h1>
+
+<p id="episode"></p>
+<button id="gen-button" onclick="genButtonClick()">Generate New Script</button>

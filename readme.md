@@ -1,13 +1,14 @@
 # Procedural Psych Episode Script
 
 Script to generate a random episode of the hilarious but formulaic show https://en.wikipedia.org/wiki/Psych
+Try it out: https://patrickmurphy.github.io/ProceduralPsychEpisode/
 
 
 ## Technology Used
 
  - Nearley https://nearley.js.org/docs/
- - Nearley-Generator https://www.npmjs.com/package/nearley-generator
  - Node https://nodejs.org/
+ - NPM: nearley-generator, gulp, shelljs, browserify
 
  - psych_script.ne 			-- a custom Nearley Grammar written to generate Psych Episodes (WIP)
 	 - psych_characters.ne 	-- describes character names etc
@@ -21,6 +22,7 @@ Script to generate a random episode of the hilarious but formulaic show https://
 		nearleyc .\psych_script.ne -o .\psych_script_compiled.js
 
 		node .\psych_generate.js
+
 
 ## How you can help
 Take a look at what I have so far, nearley is pretty straight forward, you could easily create a pull request that just adds some values to a list like
@@ -42,8 +44,8 @@ in psych_speech.ne and easily add "I want some pancakes. Who wants pancakes? Whi
 
 
 		[Setting: Friday 05:54 AM 1974 Henry's House]
-		[Young Shawn is strokinging with Younger Henry]
-		Young Shawn: Dad, I don't want to practice my skills
+		[Young Shawn is eating with Younger Henry]
+		Young Shawn: Dad, I don't want to practice my detective skills
 		Younger Henry: Shawn, you are never going to learn to be a man unless you stop acting like a kid and practice.
 
 		[Setting: Monday 04:15 PM 2020 Sewer Pipes]
