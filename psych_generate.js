@@ -50,7 +50,7 @@ var generateEpisode = function(){
 		for (var j = state_list.length - 1; j >= 0; j--) {
 			var state_setting = state_list[j];
 			txt = txt.split(state_setting.tag).join(state_setting.value);
-			console.log("Set " + state_setting.title + " set to " + state_setting.value);
+			//console.log("Set " + state_setting.title + " set to " + state_setting.value);
 		}
 	}
 
