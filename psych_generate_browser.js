@@ -6,7 +6,7 @@ var myGrammar = require('./psych_script_compiled.js');
 
 
 
-exports.generateEpisode = function generateEpisode(){
+var generateEpisode = function(){
 	var g = new NearleyGenerator.default(myGrammar);
 
 	var psych_episode_state_lists = ["characters","things"];
@@ -60,7 +60,7 @@ exports.generateEpisode = function generateEpisode(){
 	return txt;
 }
 
-console.log(exports.generateEpisode());
+console.log(generateEpisode());
 
 },{"./psych_script_compiled.js":3,"nearley-generator":1}],3:[function(require,module,exports){
 // Generated automatically by nearley, version 2.19.0
