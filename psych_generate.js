@@ -1,5 +1,7 @@
 var NearleyGenerator = require('nearley-generator');
 var myGrammar = require('./psych_script_compiled.js');
+
+
 let g = new NearleyGenerator.default(myGrammar);
 
 var psych_episode_state_lists = ["characters","things"];
