@@ -9,8 +9,7 @@
 @include "psych_utils.ne"
 
 # main procedural format
-main -> line_sep line_sep
-		plot_throw_back line_sep
+main -> plot_throw_back line_sep
 		plot_setup line_sep 
 		case_discovery line_sep 
 		plot_development line_sep 
@@ -23,9 +22,9 @@ main -> line_sep line_sep
 # 	normally something about what henry is teaching him is used to solve the crime
 #	right now just a skeleton and not very random
 plot_throw_back -> meta_setting_throwback 
-	"[Young Shawn" (" is " | " and Young Gus are ") verb "ing with Younger Henry]" line_sep1
+	"[Young Shawn" (" is " | " and Young Gus are ") verb " with Younger Henry]" line_sep1
 	"Young Shawn: " young_shawn_phrase line_sep1
-	"Younger Henry: Shawn, you are never going to learn to be a man unless you stop acting like a kid and practice."
+	"Younger Henry: " younger_henry_phrase
 
 # the scene that shows how the victim is killed/kidnapped/found dead
 #	right now just stating who killed who using what to be replaced later

@@ -30,7 +30,10 @@ gus_interests -> "Tap Dancing"
 	| "Pharmaceutical sales" 
 	| "Harry Potter Cosplay"
 
-young_shawn_phrase -> "Dad, I don't want to practice my skills."
+young_shawn_phrase -> "Dad, I don't want to practice my detective skills." | "Dad, can't I just play?"
+
+younger_henry_phrase -> "Shawn, you are never going to learn to be a man unless you stop acting like a kid and practice." 
+	| "Shawn, close your eyes, how many " ("blue" | "red" | "green" | "orange" | "white" | "purple") " " ("hats" | "wigs" | "shirts" | "pants" | "seats" | "mugs" | "jackets") " in the room?"
 
 shawn_names_for_gus -> "Radio Star"
 	| "Gee Buttersnaps"
