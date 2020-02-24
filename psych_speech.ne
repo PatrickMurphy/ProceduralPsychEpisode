@@ -30,6 +30,8 @@ gus_interests -> "Tap Dancing"
 	| "Pharmaceutical sales" 
 	| "Harry Potter Cosplay"
 
+young_shawn_phrase -> "Dad, I don't want to practice my skills."
+
 shawn_names_for_gus -> "Radio Star"
 	| "Gee Buttersnaps"
 	| "Ovaltine Jenkins"

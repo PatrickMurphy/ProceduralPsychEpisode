@@ -24,7 +24,7 @@ main -> line_sep line_sep
 #	right now just a skeleton and not very random
 plot_throw_back -> meta_setting_throwback 
 	"[Young Shawn" (" is " | " and Young Gus are ") verb "ing with Younger Henry]" line_sep1
-	"Young Shawn: Dad, I don't want to practice my skills" line_sep1
+	"Young Shawn: " young_shawn_phrase line_sep1
 	"Younger Henry: Shawn, you are never going to learn to be a man unless you stop acting like a kid and practice."
 
 # the scene that shows how the victim is killed/kidnapped/found dead

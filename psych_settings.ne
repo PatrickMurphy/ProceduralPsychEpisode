@@ -15,8 +15,8 @@ scene_setting -> "Beach"
 	| "High School" 
 	| "Old Sonora Town"
 
-investigate_setting -> ("the crime scene" 
-						| "the @VICTIM@'s " ("apartment " | "house " | "condo " | "dorm ") 
-						| "@VICTIM@'s last known location" 
-						| "@VICTIM@ on the internet" 
-						| "@VICTIM@'s " relationship)
+investigate_setting -> "the crime scene" 
+	| "the @VICTIM@'s " ("apartment " | "house " | "condo " | "dorm ") 
+	| "@VICTIM@'s last known location" 
+	| "@VICTIM@ on the internet" 
+	| "@VICTIM@'s " relationship

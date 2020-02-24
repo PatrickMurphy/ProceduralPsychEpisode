@@ -5,14 +5,22 @@ Script to generate a random episode of the hilarious but formulaic show https://
 
 ## Technology Used
 
- - Nearley
- - Nearley-Generator
- - Node
- - psych_script.ne --- a custom Nearley Grammar written to generate Psych Episodes (WIP)
-	 - psych_characters.ne --- describes character names etc
-	 - psych_speech.ne --- supports the basics of dialogue so far
-	 - psych_settings.ne --- scenes and locations
-	 - psych_utils.ne --- utilities
+ - Nearley https://nearley.js.org/docs/
+ - Nearley-Generator https://www.npmjs.com/package/nearley-generator
+ - Node https://nodejs.org/
+
+ - psych_script.ne 			-- a custom Nearley Grammar written to generate Psych Episodes (WIP)
+	 - psych_characters.ne 	-- describes character names etc
+	 - psych_speech.ne 		-- supports the basics of dialogue so far
+	 - psych_settings.ne 	-- scenes and locations
+	 - psych_utils.ne 		-- utilities
+
+## How to Build / Run
+  Complie the nearly grammer to JS, then run the Psych Generate Script.
+
+		nearleyc .\psych_script.ne -o .\psych_script_compiled.js
+
+		node .\psych_generate.js
 
 ## How you can help
 Take a look at what I have so far, nearley is pretty straight forward, you could easily create a pull request that just adds some values to a list like
