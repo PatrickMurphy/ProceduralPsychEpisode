@@ -60,7 +60,16 @@ var generateEpisode = function(){
 	return txt;
 }
 
-console.log(generateEpisode());
+
+// When browserified - we can't call myFunction() from the HTML, so we'll externalize myExtFunction()
+// On the server-side "window" is undef. so we hide it.
+if (typeof window !== 'undefined') {
+    window.generatePsychEpisode = function() {
+        return generateEpisode();
+    }
+}else{
+	console.log(generateEpisode());
+}
 
 },{"./psych_script_compiled.js":3,"nearley-generator":1}],3:[function(require,module,exports){
 // Generated automatically by nearley, version 2.19.0
