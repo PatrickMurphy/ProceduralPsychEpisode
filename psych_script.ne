@@ -14,8 +14,11 @@ main -> plot_throw_back line_sep
 		case_discovery line_sep 
 		plot_development line_sep 
 		shawn_focus1 line_sep 
-		wrong_suspect line_sep 
-		shawn_focus_final line_sep 
+			( henry_help_shawn line_sep
+			wrong_suspect line_sep 
+		| 
+			wrong_suspect line_sep 
+			shawn_focus_final line_sep )
 		capture_suspect
 
 # the flashback scene at the start of an episode
@@ -137,9 +140,19 @@ intro_first_witness -> "Hello, I am Shawn Spencer, I am a"
 #	currently just talk to the first witness, test basic shawn gus dialogue
 plot_development -> intro_first_witness line_sep dialogue
 
+# OPTIONAL: Henry solves case for shawn.
+henry_help_shawn -> meta_setting_year["2020","Henry's House"] "Shawn Spencer: Dad, you know back in the day when you had that one case just like the one I am working now, how did you solve it?" line_sep1
+	"Henry Spencer: Shawn, you know I don't want to be any part of your psychic mumbo jumbo." line_sep1
+	"Shawn Spencer: " shawn_catchphrase line_sep1
+	"Henry Spencer: Whatever, that case the weapon used was @MURDER_WEAPON@..." line_sep1
+	"Shawn Spencer: See Dad, my case too." line_sep1
+	"Henry Spencer: Anyway, turns out the body was moved to the @CRIME_SCENE@..." line_sep1
+	shawn_focus_final
+
+
 # SCENE where someone realizes that they have the wrong suspect currently
 wrong_suspect -> meta_setting "Shawn Spencer: You have the wrong suspect " char_main 
-	| "Turns out @SUSPECT2@ was actually just randomly connected"
+	| "Turns out @SUSPECT2@ was actually just randomly connected, it was @SUSPECT@ all along."
 
 
 # this is supposed to be the part of a scene that is where shawn actually notices something
