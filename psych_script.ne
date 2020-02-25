@@ -154,5 +154,7 @@ shawn_focus_sub -> "Shawn " perception " " observable " while " verb "ing. "
 					line_sep1 " He notices that the "
 
 # SCENE needed for capturing the actual guilty suspect
-capture_suspect -> char_main " captures @SUSPECT@ at " scene_setting
+capture_suspect -> char_main " captures @SUSPECT@ at " scene_setting line_sep1
+	"@SUSPECT@: You'll never take me alive!" line_sep1 
+	"Shawn Spencer: Gus take him alive."
 
