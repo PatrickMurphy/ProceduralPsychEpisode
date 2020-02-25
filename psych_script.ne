@@ -13,7 +13,7 @@ main -> plot_throw_back line_sep
 		plot_setup line_sep 
 		case_discovery line_sep 
 		plot_development line_sep 
-		shawn_focus line_sep 
+		shawn_focus1 line_sep 
 		wrong_suspect line_sep 
 		shawn_focus_final line_sep 
 		capture_suspect
@@ -126,7 +126,7 @@ intro_first_witness -> "Hello, I am Shawn Spencer, I am a"
 	"Burton Guster: Hello" ("." | ", No pictures please." | " nice to meet you.") line_sep1
 	"Shawn Spencer: I hear you are the " relationship " of @VICTIM@ when did you last see them?" line_sep1
 	"@SUSPECT2@: I saw @VICTIM@ 4 days ago. I can't believe this." line_sep1
-	shawn_focus line_sep1
+	shawn_focus2 line_sep1
 	"Shawn Spencer: ah I see... and...  you have no hard feelings toward @VICTIM@?" line_sep1
 	"@SUSPECT2@: of course not! I loved @VICTIM@!" line_sep1
 	"Shawn Spencer: Sorry had to ask, we will be leaving now." line_sep1
@@ -141,15 +141,18 @@ plot_development -> intro_first_witness line_sep dialogue
 wrong_suspect -> meta_setting "Shawn Spencer: You have the wrong suspect " char_main 
 	| "Turns out @SUSPECT2@ was actually just randomly connected"
 
-# helper function for focus to change it some to use @SUSPECT@ etc
-shawn_focus_final -> "final realization: " shawn_focus
 
 # this is supposed to be the part of a scene that is where shawn actually notices something
 #	needs quite a bit of work
-shawn_focus -> "Shawn " perception " " observable " while " verb "ing. " 
-					line_sep1 " He noices that the @MURDER_WEAPON@ was owned by @SUSPECT@"
+shawn_focus2 -> shawn_focus_sub observable " is owned by @SUSPECT2@"
+shawn_focus1 -> shawn_focus_sub observable " is owned by @SUSPECT1@"
 
+# helper function for focus to change it some to use @SUSPECT@ etc
+shawn_focus_final -> "final realization: " shawn_focus_sub "@MURDER_WEAPON@ was owned by @SUSPECT@"
+
+shawn_focus_sub -> "Shawn " perception " " observable " while " verb "ing. " 
+					line_sep1 " He notices that the "
 
 # SCENE needed for capturing the actual guilty suspect
-capture_suspect -> "capture guilty party at " scene_setting ": @SUSPECT@"
+capture_suspect -> char_main " captures @SUSPECT@ at " scene_setting
 
