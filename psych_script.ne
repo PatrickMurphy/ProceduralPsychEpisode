@@ -41,7 +41,7 @@ case_discovery -> cd_shawn | cd_gus | cd_vick | cd_lassie | cd_psych
 # case discovery sub function that describes a new client walking into the Psych Office
 	# in the future other ways they could be hired, more complex conversation
 cd_psych -> "[A potential new client walks into the Psych Office]" line_sep1
-	"New Client: Hello, my name is " random_name ". "
+	"New Client: Hello, my name is @SUSPECT2@. "
 	"I " ( "am worried about my" | "think someone may have killed my" | "would like you to find my missing" ) " "
 	relationship "." line_sep1 "Can you help solve this?"
 
@@ -92,7 +92,7 @@ cd_vick_reasons -> ("don't need your assistance on " ("this" | "every")
 
 # case_discovery sub function lassie, either he shows up to the scene before or after shawn re using cd_vick
 cd_lassie -> "Lassie shows up to the murder scene " 
-				("with Julie" ("t" | "t both off-duty" ) 
+				("with Juliet" (" " | " both off-duty" ) 
 					| "alone" 
 					| "off-duty") 
 				" "
@@ -100,7 +100,7 @@ cd_lassie -> "Lassie shows up to the murder scene "
 					| ( "after Shawn and Gus." line_sep1 
 					"Carlton Lassiter: " lassie_to_shawn_phrase line_sep1
 					"Spawn Spencer: " shawn_to_lassie line_sep1
-					cd_investigate_alone))
+					cd_investigate_alone_yell))
 
 # use yell
 cd_investigate_alone_yell -> 	"Shawn Spencer: All right, we won't go investigate the murder. (loudly)" line_sep1
@@ -112,29 +112,36 @@ cd_investigate_alone -> "Shawn Spencer: (Quietly) Gus, lets go investigate " inv
 
 
 # intro first whitness is the first person shawn questions
-intro_first_witness -> "Hello, I am Shawn Spencer, I am a" 
-	( " Head " 
-		| " Lead " 
-		| " Touring " 
-		| " world-famous " 
-		| " ") 
-	("psychic detective" 
-		| "radiation tester" 
-		| "Shadow Puppet Master" 
-		| "Rocket Scientist"
-		| "Recording Artist"
-		| "Full-time boat owner")
-	( "," | " for the SBPD," | " by trade,") 
+intro_first_witness -> intro_first_witness1
+	shawn_focus2 line_sep1
+	intro_first_witness2
+
+intro_first_witness1 -> "Hello, I am Shawn Spencer, I am a" job_prefix job_title job_postfix
 	" and this is my partner \"" shawn_names_for_gus "\". (refering to Gus)" line_sep1
 	"Burton Guster: Hello" ("." | ", No pictures please." | " nice to meet you.") line_sep1
 	"Shawn Spencer: I hear you are the " relationship " of @VICTIM@ when did you last see them?" line_sep1
 	"@SUSPECT2@: I saw @VICTIM@ " hour " days ago. I can't believe this." line_sep1
-	shawn_focus2 line_sep1
-	"Shawn Spencer: ah I see... and...  you have no hard feelings toward @VICTIM@?" line_sep1
+	
+intro_first_witness2 -> "Shawn Spencer: ah I see... and...  you have no hard feelings toward @VICTIM@?" line_sep1
 	"@SUSPECT2@: of course not! I loved @VICTIM@!" line_sep1
 	"Shawn Spencer: Sorry had to ask, we will be leaving now." line_sep1
 	"Burton Guster: (entering Blueberry) Shawn, @SUSPECT2@ totally did it." line_sep1
 	"Shawn Spencer: You know that's right."
+
+job_prefix -> " Head " 
+		| " Lead " 
+		| " Touring " 
+		| " world-famous " 
+		| " "
+
+job_title -> "psychic detective" 
+		| "radiation tester" 
+		| "Shadow Puppet Master" 
+		| "Rocket Scientist"
+		| "Recording Artist"
+		| "Full-time boat owner"
+
+job_postfix -> "," | " for the SBPD," | " by trade,"
 
 # this should be the framework for the center of the plot
 #	currently just talk to the first witness, test basic shawn gus dialogue
