@@ -50,7 +50,7 @@
 	<body>
 		<h1>Procedural Psych Episode</h1>
 
-		<button id="gen-button" onclick="genButtonClick()">Generate New Script</button>
+		<button id="gen-button" onclick="genButtonClick()">Click to Generate New Script</button>
 		<pre id="episode"></pre>
 
 		<!-- JS Code -->
@@ -59,6 +59,8 @@
 			function genButtonClick(){
 				document.getElementById("episode").innerHTML= generatePsychEpisode();
 			}
+
+			genButtonClick();
 		</script>
 
 		<!-- Git Hub Fork Me Button Code -->
