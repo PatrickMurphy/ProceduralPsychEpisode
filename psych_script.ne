@@ -130,7 +130,7 @@ intro_first_witness -> "Hello, I am Shawn Spencer, I am a"
 	"Shawn Spencer: ah I see... and...  you have no hard feelings toward @VICTIM@?" line_sep1
 	"@SUSPECT2@: of course not! I loved @VICTIM@!" line_sep1
 	"Shawn Spencer: Sorry had to ask, we will be leaving now." line_sep1
-	"Burton Guster: (entering Blueberry) Shawn, @SUSPECT2@ totataly did it." line_sep1
+	"Burton Guster: (entering Blueberry) Shawn, @SUSPECT2@ totally did it." line_sep1
 	"Shawn Spencer: You know that's right."
 
 # this should be the framework for the center of the plot
