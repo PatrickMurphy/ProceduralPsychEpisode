@@ -20,7 +20,11 @@ char_criminals -> "Pierre Despereaux"
 	| "Mr. Yin" 
 	| "Mr. Yang"
 
-random_name -> "Jared" | "John" | "Tyler" | "Abby" | "Kate" | "Jamie" | "Kelly" | "Sam"
+random_name -> random_first_name " " random_last_name
+
+random_first_name -> "Jared" | "John" | "Tyler" | "Abby" | "Kate" | "Jamie" | "Kelly" | "Sam" | "Miquel" | "Sarah" | "Sara" | "Toby" | "Tommy" | "Tom" | "JC" | "Dustin" | "Ricky" | "Leah"
+
+random_last_name -> "Smith" | "Jackson" | "Johnson" | "Murphy" | "Martin" | "Tyler" | "Carter" | "Karlsson" | "Ruiz"
 
 relationship -> "sister" 
 	| "daughter" 

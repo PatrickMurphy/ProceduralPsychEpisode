@@ -128,7 +128,7 @@ intro_first_witness -> "Hello, I am Shawn Spencer, I am a"
 	" and this is my partner \"" shawn_names_for_gus "\". (refering to Gus)" line_sep1
 	"Burton Guster: Hello" ("." | ", No pictures please." | " nice to meet you.") line_sep1
 	"Shawn Spencer: I hear you are the " relationship " of @VICTIM@ when did you last see them?" line_sep1
-	"@SUSPECT2@: I saw @VICTIM@ 4 days ago. I can't believe this." line_sep1
+	"@SUSPECT2@: I saw @VICTIM@ " hour " days ago. I can't believe this." line_sep1
 	shawn_focus2 line_sep1
 	"Shawn Spencer: ah I see... and...  you have no hard feelings toward @VICTIM@?" line_sep1
 	"@SUSPECT2@: of course not! I loved @VICTIM@!" line_sep1
@@ -152,13 +152,13 @@ henry_help_shawn -> meta_setting_year["2020","Henry's House"] "Shawn Spencer: Da
 
 # SCENE where someone realizes that they have the wrong suspect currently
 wrong_suspect -> meta_setting "Shawn Spencer: You have the wrong suspect " char_main 
-	| "Turns out @SUSPECT2@ was actually just randomly connected, it was @SUSPECT@ all along."
+	| "Turns out @SUSPECT3@ was actually just randomly connected, it was @SUSPECT@ all along."
 
 
 # this is supposed to be the part of a scene that is where shawn actually notices something
 #	needs quite a bit of work
 shawn_focus2 -> shawn_focus_sub observable " is owned by @SUSPECT2@"
-shawn_focus1 -> shawn_focus_sub observable " is owned by @SUSPECT1@"
+shawn_focus1 -> shawn_focus_sub observable " is owned by @SUSPECT3@"
 
 # helper function for focus to change it some to use @SUSPECT@ etc
 shawn_focus_final -> "final realization: " shawn_focus_sub "@MURDER_WEAPON@ was owned by @SUSPECT@"

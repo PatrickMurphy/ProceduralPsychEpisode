@@ -10,6 +10,26 @@ function defaultTask(cb) {
 		shell.echo('Error: Browserify Command failed');
 		shell.exit(1);
 	}
+	
+	if (shell.exec('nearley-railroad .\\psych_script.ne -o .\\docs\\psych_railroad.html').code !== 0) {
+		shell.echo('Error: railroad Command failed');
+		shell.exit(1);
+	}
+
+	if (shell.exec('nearley-railroad .\\psych_speech.ne -o .\\docs\\psych_speech_railroad.html').code !== 0) {
+		shell.echo('Error: railroad Command failed');
+		shell.exit(1);
+	}
+
+	if (shell.exec('nearley-railroad .\\psych_settings.ne -o .\\docs\\psych_settings_railroad.html').code !== 0) {
+		shell.echo('Error: railroad Command failed');
+		shell.exit(1);
+	}
+	
+	if (shell.exec('nearley-railroad .\\psych_characters.ne -o .\\docs\\psych_characters_railroad.html').code !== 0) {
+		shell.echo('Error: railroad Command failed');
+		shell.exit(1);
+	}
 
   	cb();
 }
