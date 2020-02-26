@@ -1,6 +1,7 @@
 # created dictionary of words
 @include "adjectives.ne"
 @include "verb.ne"
+@include "adverb.ne"
 
 # part of psych specific
 @include "psych_characters.ne"
@@ -10,61 +11,61 @@
 @include "psych_utils.ne"
 
 # main procedural format
-main -> plot_throw_back 		line_sep
-		plot_setup 				line_sep 
-		case_discovery 			 
-		plot_development 		line_sep 
-		shawn_focus1 			line_sep 
-		main_2					line_sep
-		capture_suspect
+main -> 				plot_throw_back 		line_sep
+						plot_setup 				line_sep 
+						case_discovery 			 
+						plot_development 		line_sep 
+						shawn_focus1 			line_sep 
+						main_2					line_sep
+						capture_suspect
 
 # shawn gets help from shawn
 # or wrong suspect then final realization
-main_2 -> henry_help_shawn 		line_sep
-		wrong_suspect 			line_sep 
-		|	wrong_suspect 		line_sep 
-			shawn_focus_final
+main_2 -> 				henry_help_shawn 		line_sep
+						wrong_suspect 			line_sep 
+						|	wrong_suspect 		line_sep 
+							shawn_focus_final
 
 # the flashback scene at the start of an episode
 # 	normally something about what henry is teaching him is used to solve the crime
 #	right now just a skeleton and not very random
-plot_throw_back -> meta_setting_throwback 
-	"[Young Shawn" (" is " | " and Young Gus are ") verb " with Younger Henry]" line_sep1
-	"Young Shawn: " young_shawn_phrase line_sep1
-	"Younger Henry: " younger_henry_phrase
+plot_throw_back -> 		meta_setting_throwback 
+						"[Young Shawn" (" is " | " and Young Gus are ") verb " with Younger Henry]" line_sep1
+						"Young Shawn: " young_shawn_phrase line_sep1
+						"Younger Henry: " younger_henry_phrase
 
 # the scene that shows how the victim is killed/kidnapped/found dead
 #	right now just stating who killed who using what to be replaced later
-plot_setup -> meta_setting_scene "[@VICTIM@ was killed by @SUSPECT@ using @MURDER_WEAPON@ at @CRIME_SCENE@]"
+plot_setup -> 			meta_setting_scene "[@VICTIM@ was killed by @SUSPECT@ using @MURDER_WEAPON@ at @CRIME_SCENE@]"
 
 # the scene where somehow the case is brought to the attention of Shawn, Gus and the SBPD
 #	each cd_function is a different set of rules based on who discovers the case originally
 # 	need to add Jules and Henry and maybe Woody, Buzz?
 #	sub functions in psych_case_discovery.ne
-case_discovery -> cd_shawn | cd_gus | cd_vick | cd_lassie | cd_psych
+case_discovery -> 		cd_shawn | cd_gus | cd_vick | cd_lassie | cd_psych
 
 # intro first whitness is the first person shawn questions
-intro_first_witness -> intro_first_witness1
-	shawn_focus2 line_sep1
-	intro_first_witness2
+intro_first_witness -> 	intro_first_witness1
+						shawn_focus2 line_sep1
+						intro_first_witness2
 
 intro_first_witness1 -> "Hello, I am Shawn Spencer, I am a" job_prefix job_title job_postfix
-	" and this is my partner \"" shawn_names_for_gus "\". (refering to Gus)" line_sep1
-	"Burton Guster: Hello" ("." | ", No pictures please." | " nice to meet you.") line_sep1
-	"Shawn Spencer: I hear you are the " relationship " of @VICTIM@ when did you last see them?" line_sep1
-	"@SUSPECT2@: I saw @VICTIM@ " hour " days ago. I can't believe this." line_sep1
+						" and this is my partner \"" shawn_names_for_gus "\". (refering to Gus)" line_sep1
+						"Burton Guster: Hello" ("." | ", No pictures please." | " nice to meet you.") line_sep1
+						"Shawn Spencer: I hear you are the " relationship " of @VICTIM@ when did you last see them?" line_sep1
+						"@SUSPECT2@: I saw @VICTIM@ " hour " days ago. I can't believe this." line_sep1
 	
 intro_first_witness2 -> "Shawn Spencer: ah I see... and...  you have no hard feelings toward @VICTIM@?" line_sep1
-	"@SUSPECT2@: of course not! I loved @VICTIM@!" line_sep1
-	"Shawn Spencer: Sorry had to ask, we will be leaving now." line_sep1
-	"Burton Guster: (entering Blueberry) Shawn, @SUSPECT2@ totally did it." line_sep1
-	"Shawn Spencer: You know that's right."
+						"@SUSPECT2@: of course not! I loved @VICTIM@!" line_sep1
+						"Shawn Spencer: Sorry had to ask, we will be leaving now." line_sep1
+						"Burton Guster: (entering Blueberry) Shawn, @SUSPECT2@ totally did it." line_sep1
+						"Shawn Spencer: You know that's right."
 
-job_prefix -> " Head " 
-		| " Lead " 
-		| " Touring " 
-		| " world-famous " 
-		| " "
+job_prefix -> 			" Head " 
+						| " Lead " 
+						| " Touring " 
+						| " world-famous " 
+						| " "
 
 job_title -> 			"psychic detective" 
 						| "radiation tester" 
