@@ -61,8 +61,7 @@ relationship -> 		"sister"
 						| "boss" 
 						| (so_modifier ( "girlfriend" | "boyfriend" | "husband" | "wife" ))
 
-so_modifier -> 			"ex-" 
-						| " " 
+so_modifier -> 			"ex-"  
 						| "new " 
 						| "cheating " 
 						| "2nd " 
@@ -71,3 +70,4 @@ so_modifier -> 			"ex-"
 						| "trophy " 
 						| "long-time " 
 						| "beloved " 
+						| null

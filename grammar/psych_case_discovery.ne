@@ -63,31 +63,56 @@ cd_vick_reasons -> 				"don't need your assistance on " ("this" | "every")
 
 # case_discovery sub function lassie, either he shows up to the scene before or after shawn re using cd_vick
 cd_lassie ->  					meta_setting_year["2020","@CRIME_SCENE@"] 
-								"Lassie shows up to the murder scene " 
-								# with or without juliet on/off-duty
-								(
-									(
-										"with Juliet" (" " | " both off-duty" ) 
-										| "alone"
-									) 
-									| "off-duty"
-								)
+								cd_lassie_crime_scene
+
+cd_lassie_crime_scene ->		"Lassie shows up to the murder scene " 
+								cd_lassie_arrival
 								" "
-								# Before or after Shawn and Gus
+								# Before or after Shawn and Gus arrive
+								(cd_lassie_before | cd_lassie_after)
+
+
+								# with or without juliet on/off-duty
+cd_lassie_arrival -> 			"alone"
+								| "off-duty"
+								| "with Juliet" (null | " both off-duty" ) 
+
+cd_lassie_before -> 			"before Shawn and Gus." line_sep1 
+								"Carlton Lassiter: " 
 								(
-									(
-										"before Shawn and Gus." line_sep1 
-										"Carlton Lassiter: I better alert Chief Vick of this." line_sep1 
-										cd_vick # start the vick line of logic
-									)
-								|
-									( 
-										"after Shawn and Gus." line_sep1 
-										"Carlton Lassiter: " lassie_to_shawn_phrase line_sep1
-										"Spawn Spencer: " shawn_to_lassie line_sep1
-										cd_investigate_alone_yell
-									)
-								)
+									"A dead body, that changes things." 
+									| null
+								) 
+								"I " 
+								(
+									"should" 
+									| "better" 
+									| "need to" 
+									| "have to" 
+									| "am going to"
+								) " " 
+								(
+									"alert" 
+									| "tell" 
+									| "call"
+									| "text"
+									| "talk to"
+								) " "
+								cd_lassie_notify " about this." line_sep1 
+								cd_vick # start the vick cd logic
+
+# who to tell about the body other than shawn and gus
+cd_lassie_notify ->				"The Chief" 
+								| "Chief Vick" 
+								| "everyone at the station"
+								| "Juliet" 
+								| "Henry" 
+								| "Anyone but Shawn & Gus"
+
+cd_lassie_after ->				"after Shawn and Gus." line_sep1 
+								"Carlton Lassiter: " lassie_to_shawn_phrase line_sep1
+								"Spawn Spencer: " shawn_to_lassie line_sep1
+								cd_investigate_alone_yell
 
 # use yell
 cd_investigate_alone_yell ->	"Shawn Spencer: All right, we won't go investigate the murder. (loudly)" line_sep1

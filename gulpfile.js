@@ -50,8 +50,7 @@ function run(cb) {
 	shell.exec('node ./psych_generate.js', function(code, stdout, stderr) {
 		if(code !== 0){
 			console.log('Program stderr:', stderr);
-		}else{
-			console.log('Program output:', stdout);
+			shell.exit(1);
 		}
 	});
 	cb();
