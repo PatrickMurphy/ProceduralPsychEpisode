@@ -49,8 +49,8 @@ intro_first_witness -> 	intro_first_witness1
 						shawn_focus2 line_sep1
 						intro_first_witness2
 
-intro_first_witness1 -> "Hello, I am Shawn Spencer, I am a" job_prefix job_title job_postfix
-						" and this is my partner \"" shawn_names_for_gus "\". (refering to Gus)" line_sep1
+intro_first_witness1 -> "Hello, I am Shawn Spencer, I am a " job_prefix job_title job_postfix
+						", and this is my partner \"" shawn_names_for_gus "\". (refering to Gus)" line_sep1
 						"Burton Guster: Hello" ("." | ", No pictures please." | " nice to meet you.") line_sep1
 						"Shawn Spencer: I hear you are the " relationship " of @VICTIM@ when did you last see them?" line_sep1
 						"@SUSPECT2@: I saw @VICTIM@ " hour " days ago. I can't believe this." line_sep1
@@ -61,11 +61,11 @@ intro_first_witness2 -> "Shawn Spencer: ah I see... and...  you have no hard fee
 						"Burton Guster: (entering Blueberry) Shawn, @SUSPECT2@ totally did it." line_sep1
 						"Shawn Spencer: You know that's right."
 
-job_prefix -> 			" Head " 
-						| " Lead " 
-						| " Touring " 
-						| " world-famous " 
-						| " "
+job_prefix -> 			"Head " 
+						| "Lead " 
+						| "Touring " 
+						| "world-famous " 
+						| null
 
 job_title -> 			"psychic detective" 
 						| "radiation tester" 
@@ -74,9 +74,9 @@ job_title -> 			"psychic detective"
 						| "Recording Artist"
 						| "Full-time boat owner"
 
-job_postfix -> 			"," 
-						| " for the SBPD," 
-						| " by trade,"
+job_postfix -> 			" for the SBPD" 
+						| " by trade"
+						| null
 
 # this should be the framework for the center of the plot
 #	currently just talk to the first witness, test basic shawn gus dialogue
@@ -106,8 +106,8 @@ shawn_focus1 -> 		shawn_focus_sub observable " is owned by @SUSPECT3@"
 # helper function for focus to change it some to use @SUSPECT@ etc
 shawn_focus_final -> 	"final realization: " shawn_focus_sub " @MURDER_WEAPON@ was owned by @SUSPECT@"
 
-shawn_focus_sub -> 		"Shawn " perception " " observable " while " verb "ing. " 
-						line_sep1 " He notices that the"
+shawn_focus_sub -> 		"Shawn " perception " " observable " while " verb "ing" (" " adverb | null) "." line_sep1 
+						"He notices that the"
 
 # SCENE needed for capturing the actual guilty suspect
 capture_suspect -> 		"@CAPTURE_CHAR@ captures @SUSPECT@ at " scene_setting line_sep1
