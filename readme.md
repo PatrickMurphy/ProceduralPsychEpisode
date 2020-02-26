@@ -37,26 +37,9 @@ Try it out: https://patrickmurphy.github.io/ProceduralPsychEpisode/
 		nearleyc .\grammar\psych_script.ne -o .\psych_script_compiled.js
 		node .\psych_generate.js
 
-## How you can help
-Take a look at what I have so far, nearley is pretty straight forward, you could easily create a pull request that just adds some values to a list like
-
-    	gus_phrase -> "phrase 1" | "phrase 2"
-
-in psych_speech.ne and easily add "I want some pancakes. Who wants pancakes? Whipped butter, maple syrup-- what?!" to the list like this
-
-    	gus_phrase -> "phrase 1" | "I want some pancakes. Who wants pancakes? Whipped butter, maple syrup-- what?!" | "phrase 2"
-
-
 ## Example Output
  
-		[Setting: Tuesday 03:15 PM 1978 Beach]
-		[Young Shawn and Young Gus are curse with Younger Henry]
-		Young Shawn: Dad, I don't want to practice my detective skills.
-		Younger Henry: Shawn, you are never going to learn to be a man unless you stop acting like a kid and practice.
-
-		[Setting: Thursday 09:05 PM 2020 Sewer Pipes]
-		[Abby Johnson was killed by Ricky Jackson using poison at Sewer Pipes]
-
+		...
 		Chief Vick assigns the case to Jules and Lassie.
 		Chief Vick wants to hire Shawn and Gus for the case.
 
@@ -72,29 +55,15 @@ in psych_speech.ne and easily add "I want some pancakes. Who wants pancakes? Whi
 		Shawn Spencer: Sorry had to ask, we will be leaving now.
 		Burton Guster: (entering Blueberry) Shawn, Abby Tyler totally did it.
 		Shawn Spencer: You know that's right.
+		...
 
-		[Setting: Saturday 01:56 AM 2020 Henry's House]
-		Shawn Spencer: I'd say that's pretty ridiculous. Not as ridiculous as Denise Richards playing a nuclear physicist named Christmas Jones in a Bond movie, but still.
-		Gus Burton: The Blueberry has plenty of horsepower.
-		Shawn Spencer: Sweet black licorice!
-		Gus Burton: [sarcastically] Nobody! Excellent! Call the chief at home, tell 'em the crime is solved. Because apparently, we just imagined the whole thing!
 
-		Shawn feels a theralite drawer while requitesing.
-		 He notices that thea expanding rope is owned by Miquel Smith
+## How you can help
+Take a look at what I have so far, nearley is pretty straight forward, you could easily create a pull request that just adds some values to a list like
 
-		[Setting: Thursday 08:46 AM2020 Henry's House]
-		Shawn Spencer: Dad, you know back in the day when you had that one case just like the one I am working now, how did you solve it?
-		Henry Spencer: Shawn, you know I don't want to be any part of your psychic mumbo jumbo.
-		Shawn Spencer: I got the information because, I am psychic.
-		Henry Spencer: Whatever, that case the weapon used was poison...
-		Shawn Spencer: See Dad, my case too.
-		Henry Spencer: Anyway, turns out the body was moved to the Sewer Pipes...
-		final realization: Shawn feels a desiccative knife while deadening.
-		 He notices that the poison was owned by Ricky Jackson
+    	gus_phrase -> "phrase 1" | "phrase 2"
 
-		Turns out Miquel Smith was actually just randomly connected, it was Ricky Jackson all along.
+in psych_speech.ne and easily add "I want some pancakes. Who wants pancakes? Whipped butter, maple syrup-- what?!" to the list like this
 
-		Henery Spencer captures Ricky Jackson at Beach
-		Ricky Jackson: You'll never take me alive!
-		Shawn Spencer: Henery Spencer take him alive.
-		Henery Spencer: Now we've got you, Ricky Jackson!
+    	gus_phrase -> "phrase 1" | "I want some pancakes. Who wants pancakes? Whipped butter, maple syrup-- what?!" | "phrase 2"
+
