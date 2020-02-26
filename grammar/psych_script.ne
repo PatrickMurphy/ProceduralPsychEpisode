@@ -66,48 +66,51 @@ job_prefix -> " Head "
 		| " world-famous " 
 		| " "
 
-job_title -> "psychic detective" 
-		| "radiation tester" 
-		| "Shadow Puppet Master" 
-		| "Rocket Scientist"
-		| "Recording Artist"
-		| "Full-time boat owner"
+job_title -> 			"psychic detective" 
+						| "radiation tester" 
+						| "Shadow Puppet Master" 
+						| "Rocket Scientist"
+						| "Recording Artist"
+						| "Full-time boat owner"
 
-job_postfix -> "," | " for the SBPD," | " by trade,"
+job_postfix -> 			"," 
+						| " for the SBPD," 
+						| " by trade,"
 
 # this should be the framework for the center of the plot
 #	currently just talk to the first witness, test basic shawn gus dialogue
-plot_development -> intro_first_witness line_sep dialogue
+plot_development -> 	intro_first_witness line_sep
+						dialogue
 
 # OPTIONAL: Henry solves case for shawn.
-henry_help_shawn -> meta_setting_year["2020","Henry's House"] "Shawn Spencer: Dad, you know back in the day when you had that one case just like the one I am working now, how did you solve it?" line_sep1
-	"Henry Spencer: Shawn, you know I don't want to be any part of your psychic mumbo jumbo." line_sep1
-	"Shawn Spencer: " shawn_catchphrase line_sep1
-	"Henry Spencer: Whatever, that case the weapon used was @MURDER_WEAPON@..." line_sep1
-	"Shawn Spencer: See Dad, my case too." line_sep1
-	"Henry Spencer: Anyway, turns out the body was moved to the @CRIME_SCENE@..." line_sep1
-	shawn_focus_final
+henry_help_shawn -> 	meta_setting_year["2020","Henry's House"] "Shawn Spencer: Dad, you know back in the day when you had that one case just like the one I am working now, how did you solve it?" line_sep1
+						"Henry Spencer: Shawn, you know I don't want to be any part of your psychic mumbo jumbo." line_sep1
+						"Shawn Spencer: " shawn_catchphrase line_sep1
+						"Henry Spencer: Whatever, that case the weapon used was @MURDER_WEAPON@..." line_sep1
+						"Shawn Spencer: See Dad, my case too." line_sep1
+						"Henry Spencer: Anyway, turns out the body was moved to the @CRIME_SCENE@..." line_sep1
+						shawn_focus_final
 
 
 # SCENE where someone realizes that they have the wrong suspect currently
-wrong_suspect -> meta_setting "Shawn Spencer: You have the wrong suspect " char_main 
-	| "Turns out @SUSPECT3@ was actually just randomly connected, it was @SUSPECT@ all along."
+wrong_suspect -> 		meta_setting "Shawn Spencer: You have the wrong suspect " char_main 
+						| "Turns out @SUSPECT3@ was actually just randomly connected, it was @SUSPECT@ all along."
 
 
 # this is supposed to be the part of a scene that is where shawn actually notices something
 #	needs quite a bit of work
-shawn_focus2 -> shawn_focus_sub observable " is owned by @SUSPECT2@"
-shawn_focus1 -> shawn_focus_sub observable " is owned by @SUSPECT3@"
+shawn_focus2 -> 		shawn_focus_sub observable " is owned by @SUSPECT2@"
+shawn_focus1 -> 		shawn_focus_sub observable " is owned by @SUSPECT3@"
 
 # helper function for focus to change it some to use @SUSPECT@ etc
-shawn_focus_final -> "final realization: " shawn_focus_sub " @MURDER_WEAPON@ was owned by @SUSPECT@"
+shawn_focus_final -> 	"final realization: " shawn_focus_sub " @MURDER_WEAPON@ was owned by @SUSPECT@"
 
-shawn_focus_sub -> "Shawn " perception " " observable " while " verb "ing. " 
-					line_sep1 " He notices that the"
+shawn_focus_sub -> 		"Shawn " perception " " observable " while " verb "ing. " 
+						line_sep1 " He notices that the"
 
 # SCENE needed for capturing the actual guilty suspect
-capture_suspect -> "@CAPTURE_CHAR@ captures @SUSPECT@ at " scene_setting line_sep1
-	"@SUSPECT@: You'll never take me alive!" line_sep1 
-	"Shawn Spencer: @CAPTURE_CHAR@ take him alive." line_sep1
-	"@CAPTURE_CHAR@: " capture_phrase
+capture_suspect -> 		"@CAPTURE_CHAR@ captures @SUSPECT@ at " scene_setting line_sep1
+						"@SUSPECT@: You'll never take me alive!" line_sep1 
+						"Shawn Spencer: @CAPTURE_CHAR@ take him alive." line_sep1
+						"@CAPTURE_CHAR@: " capture_phrase
 
