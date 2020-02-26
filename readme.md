@@ -12,36 +12,36 @@ Try it out: https://patrickmurphy.github.io/ProceduralPsychEpisode/
  - NPM: nearley-generator, gulp, shelljs, browserify
 
 ## Basic Code Structure
- - ./docs/ 						-- documentation and some working files
- - ./grammar/
- 	- psych_script.ne 			-- a custom Nearley Grammar written to generate Psych Episodes (WIP)
+./docs/ 						-- documentation and some working files
+./grammar/
+	- psych_script.ne 			-- a custom Nearley Grammar written to generate Psych Episodes (WIP)
 	- psych_characters.ne 		-- describes character names etc
 	- psych_speech.ne 			-- supports the basics of dialogue so far
 	- psych_settings.ne 		-- scenes and locations
 	- psych_utils.ne 			-- utilities
 
- - ./tools/ 					-- Node script to choose words to put some into nearly files by part of speech
+./tools/ 						-- Node script to choose words to put some into nearly files by part of speech
 
- - ./psych_generate.js 			-- Node Script to replace placeholders & returns or outputs the generated text
- - ./psych_generate_browser.js 	-- BrowserifyJS version of the above file for web use
- - ./gulpfile.js 				-- GulpJS Nearley build automation (nearleyc) & railroad diagrams (nearley-railroad)
+./psych_generate.js 			-- Node Script to replace placeholders & returns or outputs the generated text
+./psych_generate_browser.js 	-- BrowserifyJS version of the above file for web use
+./gulpfile.js 					-- GulpJS Nearley build automation (nearleyc) & railroad diagrams (nearley-railroad)
 
 ## How to Build / Run
   Complie the nearly grammer to JS, then run the Psych Generate Script.
-   if you have gulp-cli run gulp
-		gulp
+   if you have gulp-cli run the following command:
+		gulp build
+		gulp run
 
-   Otherwise:
+   Otherwise build with nearley with the correct filenames and run psych_generate:
 
 		nearleyc .\grammar\psych_script.ne -o .\psych_script_compiled.js
-
-   Run:
 		node .\psych_generate.js
 
 ## How you can help
 Take a look at what I have so far, nearley is pretty straight forward, you could easily create a pull request that just adds some values to a list like
 
     	gus_phrase -> "phrase 1" | "phrase 2"
+
 in psych_speech.ne and easily add "I want some pancakes. Who wants pancakes? Whipped butter, maple syrup-- what?!" to the list like this
 
     	gus_phrase -> "phrase 1" | "I want some pancakes. Who wants pancakes? Whipped butter, maple syrup-- what?!" | "phrase 2"
