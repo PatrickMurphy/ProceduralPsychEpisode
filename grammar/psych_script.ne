@@ -6,13 +6,13 @@
 @include "psych_characters.ne"
 @include "psych_speech.ne"
 @include "psych_settings.ne"
-@include "psych_utils.ne"
 @include "psych_case_discovery.ne"
+@include "psych_utils.ne"
 
 # main procedural format
 main -> plot_throw_back 		line_sep
 		plot_setup 				line_sep 
-		case_discovery 			line_sep 
+		case_discovery 			 
 		plot_development 		line_sep 
 		shawn_focus1 			line_sep 
 		main_2					line_sep
@@ -100,13 +100,14 @@ shawn_focus2 -> shawn_focus_sub observable " is owned by @SUSPECT2@"
 shawn_focus1 -> shawn_focus_sub observable " is owned by @SUSPECT3@"
 
 # helper function for focus to change it some to use @SUSPECT@ etc
-shawn_focus_final -> "final realization: " shawn_focus_sub "@MURDER_WEAPON@ was owned by @SUSPECT@"
+shawn_focus_final -> "final realization: " shawn_focus_sub " @MURDER_WEAPON@ was owned by @SUSPECT@"
 
 shawn_focus_sub -> "Shawn " perception " " observable " while " verb "ing. " 
-					line_sep1 " He notices that the "
+					line_sep1 " He notices that the"
 
 # SCENE needed for capturing the actual guilty suspect
-capture_suspect -> char_main " captures @SUSPECT@ at " scene_setting line_sep1
+capture_suspect -> "@CAPTURE_CHAR@ captures @SUSPECT@ at " scene_setting line_sep1
 	"@SUSPECT@: You'll never take me alive!" line_sep1 
-	"Shawn Spencer: Gus take him alive."
+	"Shawn Spencer: @CAPTURE_CHAR@ take him alive." line_sep1
+	"@CAPTURE_CHAR@: " capture_phrase
 

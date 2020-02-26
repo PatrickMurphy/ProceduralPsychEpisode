@@ -1,6 +1,3 @@
-
-
-
 dialogue -> meta_setting shawn_gus_dialogue line_sep1 shawn_gus_dialogue
 
 shawn_gus_dialogue -> shawn_dialogue_line line_sep1 gus_dialogue_line
@@ -90,3 +87,8 @@ lassie_to_shawn_phrase -> "Spencer, if I see you anywhere near this case, I'll t
 	| "Spencer, this case is open and shut no need for you here."
 
 lassie_phrase -> lassie_to_shawn_phrase	| "A dead body changes things." 
+
+capture_phrase -> 	"Now we've got you, @SUSPECT@!" 
+					| "Even if first we thought it was @SUSPECT2@, then thought it was @SUSPECT3@, all along we really knew it was you @SUSPECT@!"
+					| "You got, got!" 
+					| "Hands up @SUSPECT@ you are under arrest for the murder of @VICTIM@!"

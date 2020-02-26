@@ -30,6 +30,10 @@ var generateEpisode = function(){
 					, title:'2nd Wrong Suspect Name'
 					, value: g.generate('random_name', .9)
 				}
+				,{tag:'@CAPTURE_CHAR@'
+					, title:'character that captures the suspect'
+					, value: g.generate('char_main', .9)
+				}
 			],
 		things: [
 			{tag: '@MURDER_WEAPON@'
