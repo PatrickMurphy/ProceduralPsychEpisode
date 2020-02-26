@@ -11,7 +11,7 @@ Try it out: https://patrickmurphy.github.io/ProceduralPsychEpisode/
  - Node https://nodejs.org/
  - NPM: nearley-generator, gulp, shelljs, browserify
 
-## Basic Code Structure
+## File Structure
 ./docs/ 						-- documentation and some working files
 
 ./grammar/
@@ -31,12 +31,12 @@ Try it out: https://patrickmurphy.github.io/ProceduralPsychEpisode/
 ./gulpfile.js 					-- GulpJS Nearley build automation (nearleyc) & railroad diagrams (nearley-railroad)
 
 ## How to Build / Run
-  Complie the nearly grammer to JS, then run the Psych Generate Script.
-   if you have gulp-cli run the following command:
+  If you have gulp-cli run the following command:
+
 		gulp build
 		gulp run
 
-   Otherwise build with nearley with the correct filenames and run psych_generate:
+   Otherwise build the nearly grammer to JS, then run the Psych Generate Script:
 
 		nearleyc .\grammar\psych_script.ne -o .\psych_script_compiled.js
 		node .\psych_generate.js
