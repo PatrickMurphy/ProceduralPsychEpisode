@@ -13,17 +13,21 @@ Try it out: https://patrickmurphy.github.io/ProceduralPsychEpisode/
 
 ## Basic Code Structure
 ./docs/ 						-- documentation and some working files
+
 ./grammar/
-	- psych_script.ne 			-- a custom Nearley Grammar written to generate Psych Episodes (WIP)
-	- psych_characters.ne 		-- describes character names etc
-	- psych_speech.ne 			-- supports the basics of dialogue so far
-	- psych_settings.ne 		-- scenes and locations
-	- psych_utils.ne 			-- utilities
+
+- psych_script.ne 			-- a custom Nearley Grammar written to generate Psych Episodes (WIP)
+- psych_characters.ne 		-- describes character names etc
+- psych_speech.ne 			-- supports the basics of dialogue so far
+- psych_settings.ne 		-- scenes and locations
+- psych_utils.ne 			-- utilities
 
 ./tools/ 						-- Node script to choose words to put some into nearly files by part of speech
 
 ./psych_generate.js 			-- Node Script to replace placeholders & returns or outputs the generated text
+
 ./psych_generate_browser.js 	-- BrowserifyJS version of the above file for web use
+
 ./gulpfile.js 					-- GulpJS Nearley build automation (nearleyc) & railroad diagrams (nearley-railroad)
 
 ## How to Build / Run
