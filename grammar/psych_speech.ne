@@ -90,8 +90,9 @@ lassie_to_shawn_phrase -> "Spencer, if I see you anywhere near this case, I'll t
 						| "Why are you always here first?"
 						| "Spencer, this case is open and shut no need for you here."
 
-lassie_phrase -> 		lassie_to_shawn_phrase	
-						| "A dead body changes things." 
+lassie_cd_phrase ->		"A dead body changes things."
+
+lassie_phrase -> 		lassie_to_shawn_phrase | lassie_cd_phrase 
 
 capture_phrase -> 		"Now we've got you, @SUSPECT@!" 
 						| "Even if first we thought it was @SUSPECT2@, then thought it was @SUSPECT3@, all along we really knew it was you @SUSPECT@!"

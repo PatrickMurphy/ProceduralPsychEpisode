@@ -1,4 +1,5 @@
 
+# meta scene setting macros
 meta_setting_year[YEAR,SET] -> 	"[Setting: " datetime $YEAR " " $SET "]" line_sep1
 meta_setting[SET] -> 			meta_setting_year[" 2020",$SET]
 
@@ -7,7 +8,7 @@ meta_setting -> 				meta_setting[setting]
 meta_setting_throwback -> 		meta_setting_year[(" 197" ("0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9")),setting]
 
 
-
+# reusable word classes
 observable -> 					object_adj 
 								| weapon_adj
 
@@ -37,6 +38,20 @@ perception -> 					"sees"
 								| "feels a vibration" 
 								| "remembers"
 
+contact_types ->				"alert" 
+								| "tell" 
+								| "call"
+								| "text"
+								| "talk to"
+
+need_to -> 						"should" 
+								| "better" 
+								| "need to" 
+								| "have to" 
+								| "am going to"
+
+
+# date & time functions
 datetime -> 					date " " time
 
 date -> 						day
@@ -77,6 +92,8 @@ minute -> 						"00"
 								| "54"
 								| "56"
 
+
+# new line functions
 line_sep -> 					"\n\n"
 
 line_sep1 -> 					"\n"

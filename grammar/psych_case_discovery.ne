@@ -80,29 +80,14 @@ cd_lassie_arrival -> 			"alone"
 cd_lassie_before -> 			"before Shawn and Gus." line_sep1 
 								"Carlton Lassiter: " 
 								(
-									"A dead body, that changes things." 
+									lassie_cd_phrase 
 									| null
 								) 
-								"I " 
-								(
-									"should" 
-									| "better" 
-									| "need to" 
-									| "have to" 
-									| "am going to"
-								) " " 
-								(
-									"alert" 
-									| "tell" 
-									| "call"
-									| "text"
-									| "talk to"
-								) " "
-								cd_lassie_notify " about this." line_sep1 
-								cd_vick # start the vick cd logic
+								"I " need_to " " contact_types " " cd_lassie_notify_char " about this." line_sep1 
+								cd_vick # start the vick cd logic			
 
 # who to tell about the body other than shawn and gus
-cd_lassie_notify ->				"The Chief" 
+cd_lassie_notify_char ->		"The Chief" 
 								| "Chief Vick" 
 								| "everyone at the station"
 								| "Juliet" 
