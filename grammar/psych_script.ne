@@ -106,7 +106,7 @@ shawn_focus1 -> 		shawn_focus_sub observable " is owned by @SUSPECT3@"
 # helper function for focus to change it some to use @SUSPECT@ etc
 shawn_focus_final -> 	"final realization: " shawn_focus_sub " @MURDER_WEAPON@ was owned by @SUSPECT@"
 
-shawn_focus_sub -> 		"Shawn " perception " " observable " while " verb "ing" (" " adverb | null) "." line_sep1 
+shawn_focus_sub -> 		"Shawn " perception " " observable " while " verb "ing" (null | " " adverb ) "." line_sep1 
 						"He notices that the"
 
 # SCENE needed for capturing the actual guilty suspect
